@@ -1,0 +1,503 @@
+
+
+
+materialPath: c:\program files\steam\steamapps\SourceMods\testmap\materials
+Loading C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.vmf
+Patching WVT material: maps/test_bsp_parse/nature/blendmudmud001a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (8848 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 42 texinfos to 24
+Reduced 18 texdatas to 13 (514 bytes to 411)
+Writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+1 second elapsed
+
+
+
+2 threads
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt
+  26 portalclusters
+  51 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 646
+Average clusters visible: 24
+Building PAS...
+Average clusters audible: 26
+visdatasize:420  compressed from 416
+writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+90 faces
+21866 square feet [3148705.75 square inches]
+1 Displacements
+113 Square Feet [16384.00 Square Inches]
+90 patches before subdivision
+1872 patches after subdivision
+3 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 100289, max 227
+transfer lists:   0.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(7275, 6836, 5884)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(1565, 1409, 1072)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(338, 296, 205)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(85, 72, 46)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(23, 20, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(7, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0023 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 24/8192          288/98304    ( 0.3%) 
+brushsides             144/65536        1152/524288   ( 0.2%) 
+planes                 110/65536        2200/1310720  ( 0.2%) 
+vertexes               149/65536        1788/786432   ( 0.2%) 
+nodes                   71/65536        2272/2097152  ( 0.1%) 
+texinfos                24/12288        1728/884736   ( 0.2%) 
+texdata                 13/2048          416/65536    ( 0.6%) 
+dispinfos                1/0             176/0        ( 0.0%) 
+disp_verts              81/0            1620/0        ( 0.0%) 
+disp_tris              128/0             256/0        ( 0.0%) 
+disp_lmsamples         400/0             400/0        ( 0.0%) 
+faces                   90/65536        5040/3670016  ( 0.1%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               58/65536        3248/3670016  ( 0.1%) 
+leaves                  74/65536        2368/2097152  ( 0.1%) 
+leaffaces              110/65536         220/131072   ( 0.2%) 
+leafbrushes             39/65536          78/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              648/512000       2592/2048000  ( 0.1%) 
+edges                  386/256000       1544/1024000  ( 0.2%) 
+LDR worldlights          3/8192          264/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              5/32768          50/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            78/65536         156/131072   ( 0.1%) 
+cubemapsamples           3/1024           48/16384    ( 0.3%) 
+overlays                 2/512           704/180224   ( 0.4%) 
+LDR lightdata         [variable]       92828/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]         420/16777216 ( 0.0%) 
+entdata               [variable]        2851/393216   ( 0.7%) 
+LDR ambient table       74/65536         296/262144   ( 0.1%) 
+HDR ambient table       74/65536         296/262144   ( 0.1%) 
+LDR leaf ambient       324/65536        9072/1835008  ( 0.5%) 
+HDR leaf ambient        74/65536        2072/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/192      ( 0.5%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/790      ( 0.1%) 
+pakfile               [variable]      424499/0        ( 0.0%) 
+physics               [variable]        8848/4194304  ( 0.2%) 
+physics terrain       [variable]         139/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 236
+Writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+3 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\SourceMods\testmap\materials
+Loading C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.vmf
+Patching WVT material: maps/test_bsp_parse/nature/blendmudmud001a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (8848 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 42 texinfos to 24
+Reduced 18 texdatas to 13 (514 bytes to 411)
+Writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+0 seconds elapsed
+
+
+
+2 threads
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt
+  26 portalclusters
+  51 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 646
+Average clusters visible: 24
+Building PAS...
+Average clusters audible: 26
+visdatasize:420  compressed from 416
+writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+90 faces
+21866 square feet [3148705.75 square inches]
+1 Displacements
+113 Square Feet [16384.00 Square Inches]
+90 patches before subdivision
+1872 patches after subdivision
+3 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 100289, max 227
+transfer lists:   0.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(7275, 6836, 5884)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(1565, 1409, 1072)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(338, 296, 205)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(85, 72, 46)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(23, 20, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(7, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0023 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 24/8192          288/98304    ( 0.3%) 
+brushsides             144/65536        1152/524288   ( 0.2%) 
+planes                 110/65536        2200/1310720  ( 0.2%) 
+vertexes               149/65536        1788/786432   ( 0.2%) 
+nodes                   71/65536        2272/2097152  ( 0.1%) 
+texinfos                24/12288        1728/884736   ( 0.2%) 
+texdata                 13/2048          416/65536    ( 0.6%) 
+dispinfos                1/0             176/0        ( 0.0%) 
+disp_verts              81/0            1620/0        ( 0.0%) 
+disp_tris              128/0             256/0        ( 0.0%) 
+disp_lmsamples         400/0             400/0        ( 0.0%) 
+faces                   90/65536        5040/3670016  ( 0.1%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               58/65536        3248/3670016  ( 0.1%) 
+leaves                  74/65536        2368/2097152  ( 0.1%) 
+leaffaces              110/65536         220/131072   ( 0.2%) 
+leafbrushes             39/65536          78/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              648/512000       2592/2048000  ( 0.1%) 
+edges                  386/256000       1544/1024000  ( 0.2%) 
+LDR worldlights          3/8192          264/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              5/32768          50/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            78/65536         156/131072   ( 0.1%) 
+cubemapsamples           3/1024           48/16384    ( 0.3%) 
+overlays                 2/512           704/180224   ( 0.4%) 
+LDR lightdata         [variable]       92828/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]         420/16777216 ( 0.0%) 
+entdata               [variable]        2851/393216   ( 0.7%) 
+LDR ambient table       74/65536         296/262144   ( 0.1%) 
+HDR ambient table       74/65536         296/262144   ( 0.1%) 
+LDR leaf ambient       324/65536        9072/1835008  ( 0.5%) 
+HDR leaf ambient        74/65536        2072/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/192      ( 0.5%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/790      ( 0.1%) 
+pakfile               [variable]      424499/0        ( 0.0%) 
+physics               [variable]        8848/4194304  ( 0.2%) 
+physics terrain       [variable]         139/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 236
+Writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+3 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\SourceMods\testmap\materials
+Loading C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.vmf
+Patching WVT material: maps/test_bsp_parse/nature/blendmudmud001a_wvt_patch
+fixing up env_cubemap materials on brush sides...
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt...Building visibility clusters...
+done (0)
+Creating default LDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Creating default HDR cubemaps for env_cubemap using skybox materials:
+   skybox/sky_day01_01*.vmt
+ ! Run buildcubemaps in the engine to get the correct cube maps.
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (8848 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 42 texinfos to 24
+Reduced 18 texdatas to 13 (514 bytes to 411)
+Writing C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+0 seconds elapsed
+
+
+
+2 threads
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt
+  26 portalclusters
+  49 numportals
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10Optimized: 0 visible clusters (0.00%)
+Total clusters visible: 646
+Average clusters visible: 24
+Building PAS...
+Average clusters audible: 26
+visdatasize:420  compressed from 416
+writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+0 seconds elapsed
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+90 faces
+21866 square feet [3148705.75 square inches]
+1 Displacements
+113 Square Feet [16384.00 Square Inches]
+90 patches before subdivision
+1840 patches after subdivision
+3 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 98916, max 226
+transfer lists:   0.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(7236, 6798, 5852)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(1556, 1400, 1064)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(336, 294, 204)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(84, 71, 46)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(23, 20, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(7, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0023 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 24/8192          288/98304    ( 0.3%) 
+brushsides             144/65536        1152/524288   ( 0.2%) 
+planes                 110/65536        2200/1310720  ( 0.2%) 
+vertexes               149/65536        1788/786432   ( 0.2%) 
+nodes                   71/65536        2272/2097152  ( 0.1%) 
+texinfos                24/12288        1728/884736   ( 0.2%) 
+texdata                 13/2048          416/65536    ( 0.6%) 
+dispinfos                1/0             176/0        ( 0.0%) 
+disp_verts              81/0            1620/0        ( 0.0%) 
+disp_tris              128/0             256/0        ( 0.0%) 
+disp_lmsamples         400/0             400/0        ( 0.0%) 
+faces                   90/65536        5040/3670016  ( 0.1%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               58/65536        3248/3670016  ( 0.1%) 
+leaves                  74/65536        2368/2097152  ( 0.1%) 
+leaffaces              112/65536         224/131072   ( 0.2%) 
+leafbrushes             39/65536          78/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              648/512000       2592/2048000  ( 0.1%) 
+edges                  386/256000       1544/1024000  ( 0.2%) 
+LDR worldlights          3/8192          264/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              5/32768          50/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            81/65536         162/131072   ( 0.1%) 
+cubemapsamples           3/1024           48/16384    ( 0.3%) 
+overlays                 2/512           704/180224   ( 0.4%) 
+LDR lightdata         [variable]       93052/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]         420/16777216 ( 0.0%) 
+entdata               [variable]        4237/393216   ( 1.1%) 
+LDR ambient table       74/65536         296/262144   ( 0.1%) 
+HDR ambient table       74/65536         296/262144   ( 0.1%) 
+LDR leaf ambient       328/65536        9184/1835008  ( 0.5%) 
+HDR leaf ambient        74/65536        2072/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/192      ( 0.5%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/790      ( 0.1%) 
+pakfile               [variable]      424499/0        ( 0.0%) 
+physics               [variable]        8848/4194304  ( 0.2%) 
+physics terrain       [variable]         139/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 236
+Writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+3 seconds elapsed
+
+
+
+materialPath: c:\program files\steam\steamapps\SourceMods\testmap\materials
+Loading C:\Users\Darien\Documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.vmf
+Brush 296: no visible sides on brush
+Brush 296: no visible sides on brush
+Brush 296: no visible sides on brush
+
+
+
+2 threads
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+reading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt
+LoadPortals: couldn't read c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.prt
+
+
+
+[Reading texlights from 'lights.rad']
+[45 texlights parsed from 'lights.rad']
+
+Loading c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+90 faces
+21866 square feet [3148705.75 square inches]
+1 Displacements
+113 Square Feet [16384.00 Square Inches]
+90 patches before subdivision
+1840 patches after subdivision
+3 direct lights
+0...1...2...3...4...5...6...7...8...9...100...1...2...3...4...5...6...7...8...9...10transfers 98916, max 226
+transfer lists:   0.8 megs
+0...1...2...3...4...5...6...7...8...9...10	Bounce #1 added RGB(7236, 6798, 5852)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #2 added RGB(1556, 1400, 1064)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #3 added RGB(336, 294, 204)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #4 added RGB(84, 71, 46)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #5 added RGB(23, 20, 12)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #6 added RGB(7, 6, 3)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #7 added RGB(2, 2, 1)
+0...1...2...3...4...5...6...7...8...9...10	Bounce #8 added RGB(1, 1, 0)
+Build Patch/Sample Hash Table(s).....Done<0.0023 sec>
+0...1...2...3...4...5...6...7...8...9...10FinalLightFace Done
+Computing detail prop lighting : 0...1...2...3...4...5...6...7...8...9...10
+0 of 0 (0% of) surface lights went in leaf ambient cubes.
+0...1...2...3...4...5...6...7...8...9...10Writing leaf ambient...done
+Ready to Finish
+
+Object names       Objects/Maxobjs  Memory / Maxmem  Fullness 
+------------       ---------------  ---------------  -------- 
+models                   2/1024           96/49152    ( 0.2%) 
+brushes                 24/8192          288/98304    ( 0.3%) 
+brushsides             144/65536        1152/524288   ( 0.2%) 
+planes                 110/65536        2200/1310720  ( 0.2%) 
+vertexes               149/65536        1788/786432   ( 0.2%) 
+nodes                   71/65536        2272/2097152  ( 0.1%) 
+texinfos                24/12288        1728/884736   ( 0.2%) 
+texdata                 13/2048          416/65536    ( 0.6%) 
+dispinfos                1/0             176/0        ( 0.0%) 
+disp_verts              81/0            1620/0        ( 0.0%) 
+disp_tris              128/0             256/0        ( 0.0%) 
+disp_lmsamples         400/0             400/0        ( 0.0%) 
+faces                   90/65536        5040/3670016  ( 0.1%) 
+hdr faces                0/65536           0/3670016  ( 0.0%) 
+origfaces               58/65536        3248/3670016  ( 0.1%) 
+leaves                  74/65536        2368/2097152  ( 0.1%) 
+leaffaces              112/65536         224/131072   ( 0.2%) 
+leafbrushes             39/65536          78/131072   ( 0.1%) 
+areas                    2/256            16/2048     ( 0.8%) 
+surfedges              648/512000       2592/2048000  ( 0.1%) 
+edges                  386/256000       1544/1024000  ( 0.2%) 
+LDR worldlights          3/8192          264/720896   ( 0.0%) 
+HDR worldlights          0/8192            0/720896   ( 0.0%) 
+leafwaterdata            0/32768           0/393216   ( 0.0%) 
+waterstrips              5/32768          50/327680   ( 0.0%) 
+waterverts               0/65536           0/786432   ( 0.0%) 
+waterindices            81/65536         162/131072   ( 0.1%) 
+cubemapsamples           3/1024           48/16384    ( 0.3%) 
+overlays                 2/512           704/180224   ( 0.4%) 
+LDR lightdata         [variable]       93052/0        ( 0.0%) 
+HDR lightdata         [variable]           0/0        ( 0.0%) 
+visdata               [variable]         420/16777216 ( 0.0%) 
+entdata               [variable]        4237/393216   ( 1.1%) 
+LDR ambient table       74/65536         296/262144   ( 0.1%) 
+HDR ambient table       74/65536         296/262144   ( 0.1%) 
+LDR leaf ambient       328/65536        9184/1835008  ( 0.5%) 
+HDR leaf ambient        74/65536        2072/1835008  ( 0.1%) 
+occluders                0/0               0/0        ( 0.0%) 
+occluder polygons        0/0               0/0        ( 0.0%) 
+occluder vert ind        0/0               0/0        ( 0.0%) 
+detail props          [variable]           1/192      ( 0.5%) 
+dtl prp lght          [variable]           1/4        (25.0%) 
+HDR dtl prp lght      [variable]           1/4        (25.0%) 
+static props          [variable]           1/790      ( 0.1%) 
+pakfile               [variable]      424499/0        ( 0.0%) 
+physics               [variable]        8848/4194304  ( 0.2%) 
+physics terrain       [variable]         139/1048576  ( 0.0%) 
+
+Level flags = 0
+
+Total triangle count: 236
+Writing c:\users\darien\documents\craprat\hl2parse\src\test\resources\com\technofovea\hl2parse\bsp\test_bsp_parse.bsp
+3 seconds elapsed

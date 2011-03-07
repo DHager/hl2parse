@@ -1,0 +1,40 @@
+@MaterialExclusion
+[
+	// Names of the sub-directories we don't want to load materials from
+	"alpha"
+        "beta"
+        "gamma/delta"
+]
+
+@AutoVisGroup = "Tool Brushes"
+[
+	"Vis Clusters"
+	[
+		"func_viscluster"
+	]
+]
+
+@AutoVisGroup = "Custom"
+[
+	"AI, Choreo"
+	[
+		"ai_speechfilter"
+		"bot_controller"
+		"bot_generator"
+		"bot_hint_sentrygun"
+	]
+
+	"Cameras"
+	[
+		"info_observer_point"
+		"game_intro_viewpoint"
+		"info_camera_link"
+	]
+
+
+	"Sound"
+	[
+		"ambient_generic"
+		"env_microphone"
+	]
+]

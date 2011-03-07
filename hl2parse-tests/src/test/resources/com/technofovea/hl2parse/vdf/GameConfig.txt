@@ -1,0 +1,76 @@
+"Configs"
+{
+	"Games"
+	{
+		"Half-Life 2: Episode Two"
+		{
+			"GameDir"		"c:\program files\steam\steamapps\STEAMLOGON\half-life 2 episode two\ep2"
+			"hammer"
+			{
+				"GameData0"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\halflife2.fgd"
+				"TextureFormat"		"5"
+				"MapFormat"		"4"
+				"DefaultTextureScale"		"0.250000"
+				"DefaultLightmapScale"		"16"
+				"GameExe"		"c:\program files\steam\steamapps\STEAMLOGON\half-life 2 episode two\hl2.exe"
+				"DefaultSolidEntity"		"func_detail"
+				"DefaultPointEntity"		"info_player_start"
+				"BSP"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vbsp.exe"
+				"Vis"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vvis.exe"
+				"Light"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vrad.exe"
+				"GameExeDir"		"c:\program files\steam\steamapps\STEAMLOGON\half-life 2 episode two"
+				"MapDir"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk_content\ep2\mapsrc"
+				"BSPDir"		"c:\program files\steam\steamapps\STEAMLOGON\half-life 2 episode two\ep2\maps"
+				"CordonTexture"		"tools\toolsskybox"
+				"MaterialExcludeCount"		"0"
+			}
+		}
+		"Team Fortress 2"
+		{
+			"GameDir"		"c:\program files\steam\steamapps\STEAMLOGON\team fortress 2\tf"
+			"hammer"
+			{
+				"GameData0"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\tf-abs.fgd"
+				"TextureFormat"		"5"
+				"MapFormat"		"4"
+				"DefaultTextureScale"		"0.250000"
+				"DefaultLightmapScale"		"16"
+				"GameExe"		"c:\program files\steam\steamapps\STEAMLOGON\team fortress 2\hl2.exe"
+				"DefaultSolidEntity"		"func_detail"
+				"DefaultPointEntity"		"prop_static"
+				"BSP"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vbsp.exe"
+				"Vis"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vvis.exe"
+				"Light"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vrad.exe"
+				"GameExeDir"		"c:\program files\steam\steamapps\STEAMLOGON\team fortress 2"
+				"MapDir"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk_content\tf\mapsrc"
+				"BSPDir"		"c:\program files\steam\steamapps\STEAMLOGON\team fortress 2\tf\maps"
+				"CordonTexture"		"tools\toolsskybox"
+				"MaterialExcludeCount"		"0"
+			}
+		}
+		"Portal"
+		{
+			"GameDir"		"c:\program files\steam\steamapps\STEAMLOGON\portal\portal"
+			"hammer"
+			{
+				"GameData0"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\portal.fgd"
+				"TextureFormat"		"5"
+				"MapFormat"		"4"
+				"DefaultTextureScale"		"0.250000"
+				"DefaultLightmapScale"		"16"
+				"GameExe"		"c:\program files\steam\steamapps\STEAMLOGON\portal\hl2.exe"
+				"DefaultSolidEntity"		"func_detail"
+				"DefaultPointEntity"		"info_player_start"
+				"BSP"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vbsp.exe"
+				"Vis"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vvis.exe"
+				"Light"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk\bin\orangebox\bin\vrad.exe"
+				"GameExeDir"		"c:\program files\steam\steamapps\STEAMLOGON\portal"
+				"MapDir"		"c:\program files\steam\steamapps\STEAMLOGON\sourcesdk_content\portal\mapsrc"
+				"BSPDir"		"c:\program files\steam\steamapps\STEAMLOGON\portal\portal\maps"
+				"CordonTexture"		"tools\toolsskybox"
+				"MaterialExcludeCount"		"0"
+			}
+		}
+	}
+	"SDKVersion"		"3"
+}

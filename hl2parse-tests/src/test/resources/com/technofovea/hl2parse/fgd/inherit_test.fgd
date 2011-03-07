@@ -1,0 +1,57 @@
+@BaseClass = Flying
+[
+	maxheight(integer) : "Max flying height" : 0 : "The highest this thing can fly" +
+		" before problems occur."
+]
+
+@BaseClass = Machine
+[
+	manufacturer(string) : "Manf. Name" : "" : "The name of the manufacturer"
+        conflictingproperty(string): "TestingMachine" : "" : "A test property"
+]
+
+@BaseClass = Animal
+[
+        conflictingproperty(string): "TestingAnimal" : "" : "A test property"
+        phylum(choices) : "Phylum" : 0 : "The animal phylum this entity belongs to" =
+	[
+                0: "unspecified"
+		1: "porifera"
+                2: "cnidaria"
+                3: "ctenophora"
+                4: "platyhelminthes"
+                5: "nemertea"
+                6: "rotifera"
+                7: "gastrotricha"
+                8: "nematomorpha"
+                9: "nematoda"
+               10: "acanthocephala"
+               11: "bryozoa"
+               12: "tardigrada"
+               13: "brachiopoda"
+               14: "mollusca"
+               15: "annelida"
+               16: "sipunculoidea"
+               17: "arthropoda"
+               18: "chaetognatha"
+               19: "echinodermata"
+               20: "hemichordata"
+               21: "chordata"
+	]
+]
+
+@PointClass base(Animal,Flying) = FlyingAnimal : "An animal which can fly"
+[
+        wingcount(integer): "Wing count" : 2 : "Number of wings"
+]
+
+@PointClass base(Machine,Flying) = FlyingMachine : "A machine which can fly"
+[
+        engines(integer): "Engine count" : 2 : "Number of engines"
+]
+
+@PointClass base(FlyingAnimal, FlyingMachine) = CyberBird : "A flying birdlike cyborg."
+[
+        airating(integer): "AI rating" : 100 : "AI rating in adjusted IQ points"
+]
+

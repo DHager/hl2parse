@@ -1,0 +1,14 @@
+@PointClass = Gamma
+[
+	placeholder(string)
+]
+
+@PointClass = Delta
+[
+        eraser(string) : "Erases prior 'Delta' definition"
+]
+
+@PointClass = Epsilon
+[
+        erased(string) : "Wiped out declaration from the includer file"
+]

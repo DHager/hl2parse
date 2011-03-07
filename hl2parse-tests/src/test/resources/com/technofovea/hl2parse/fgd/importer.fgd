@@ -1,0 +1,6 @@
+@include "imported1.fgd"
+
+@PointClass = Alpha
+[
+	placeholder(string)
+]

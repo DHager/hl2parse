@@ -1,0 +1,12 @@
+"SteamAppData"
+{
+	"RememberPassword"		"0"
+	"AutoLoginUser"		"user@example.com"
+	"terr_@hotmail.com"
+	{
+		"User"		"user@example.com"
+		"AccountCreated"		"1"
+		"ShowNotifyTrayHintDialog"		"1"
+		"hash"		""
+	}
+}

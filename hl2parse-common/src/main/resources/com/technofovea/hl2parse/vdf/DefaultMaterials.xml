@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<materialRefList>
+    <!--
+    Default HL2Parse material reference list
+    Last modified June 16 2010
+
+    Directives ending in "2" for blending are automatic and do not need to be
+    re-listed.
+    -->
+    <item>
+        <names>$basetexture</names>
+        <type>texture</type>
+    </item>
+    <item>
+        <names>$bumpmap</names>
+    </item>
+    <item>
+        <names>$normalmap</names>
+    </item>
+    <item>
+        <names>$detail</names>
+    </item>
+    <item>
+        <names>$dudvmap</names>
+    </item>
+    <item>
+        <names>$refracttinttexture</names>
+    </item>
+    <item>
+        <names>$envmapmask</names>
+    </item>
+    <item>
+        <names>$parallaxmap</names>
+    </item>
+    <item>
+        <names>$ambientoccltexture</names>
+    </item>
+    <item>
+        <names>$hdrcompressedtexture $hdrbasetexture</names>
+    </item>
+    <item>
+        <names>$lightwarptexture</names>
+    </item>
+    <item>
+        <names>$refracttinttexture</names>
+    </item>
+    <item>
+        <names>$phongexponenttexture</names>
+    </item>
+    <item>
+        <names>$fallbackmaterial</names>
+        <type>material</type>
+    </item>
+    <item>
+        <names>$bottommaterial</names>
+        <type>material</type>
+    </item>
+    <item>
+        <names>$underwateroverlay</names>
+        <type>material</type>
+    </item>
+    <item>
+        <names>$refracttexture</names>
+        <ignoreValue>_rt_WaterRefraction</ignoreValue>
+        <type>texture</type>
+    </item>
+    <item>
+        <names>$envmap</names>
+        <ignoreValue>env_cubemap</ignoreValue>
+        <type>texture</type>
+    </item>
+    <item>
+        <names>$reflecttexture</names>
+        <ignoreValue>_rt_WaterReflection</ignoreValue>
+        <type>texture</type>
+    </item>
+    <item>
+        <names>$fallbackmaterial</names>
+        <type>material</type>
+    </item>
+
+    <!-- HL2 Vortigaunt healing stuff -->
+
+    <item>
+        <names>$FleshInteriorTexture
+            $FleshNormalTexture
+            $FleshBorderTexture1D
+            $FleshInteriorNoiseTexture
+        $FleshSubsurfaceTexture</names>
+    </item>
+    <item>
+        <names>$FleshCubeTexture</names>
+        <ignoreValue>env_cubemap</ignoreValue>
+        <type>material</type>
+    </item>
+</materialRefList>

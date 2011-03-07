@@ -1,0 +1,225 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.technofovea</groupId>
+    <artifactId>hl2parse</artifactId>
+    <version>1.3</version>
+
+    <packaging>pom</packaging>
+    <name>HL2Parse</name>
+    <url>http://technofovea.com/</url>
+    <description>
+
+    </description>
+
+    <modules>
+        <!-- -->
+        <module>hl2parse-common</module>
+        <module>hl2parse-binary</module>
+        <module>hl2parse-parsers</module>
+        <module>hl2parse-tests</module>
+        <!--
+        <module>hl2parse-model</module>
+        <module>hl2parse-registry</module>
+        -->
+    </modules>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.antlr</groupId>
+                    <artifactId>antlr3-maven-plugin</artifactId>
+                    <version>3.3</version>
+                    <executions>
+                        <execution>
+                            <phase>generate-sources</phase>
+                            <goals>
+                                <goal>antlr</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                    <configuration>
+                        <!--
+                            <debug>true</debug>
+                            -->
+                            <!--
+                            <libDirectory>src/main/antlr3/imports</libDirectory>
+                            <messageFormat>antlr</messageFormat>
+                            <outputDirectory>src/main/java/</outputDirectory>
+                            <profile>false</profile>
+                            <sourceDirectory>src/main/antlr3</sourceDirectory>
+                            -->
+                        <verbose>true</verbose>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <executions>
+                    <!--
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                    -->
+                </executions>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <!--
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                -->
+                <configuration>
+                    <links>
+                        <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
+                        <link>http://jakarta.apache.org/commons/chain/apidocs</link>
+                    </links>
+                    <show>public</show>
+
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <encoding>UTF-8</encoding>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>com.google.code.maven-license-plugin</groupId>
+                <artifactId>maven-license-plugin</artifactId>
+                <version>1.4.0</version>
+                <inherited>false</inherited>
+                <configuration>
+                    <header>license_header.txt</header>
+                    <aggregate>true</aggregate>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.g</include>
+                    </includes>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>check</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+    <reporting>
+        <plugins>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <configuration>
+                    <reportOutputDirectory>${project.reporting.outputDirectory}/apidocs/${version}</reportOutputDirectory>
+                    <destDir>apidocs/${version}</destDir>
+                </configuration>
+            </plugin>
+        </plugins>
+    </reporting>
+
+    <dependencyManagement>
+        <dependencies>
+
+            <dependency>
+                <groupId>com.technofovea</groupId>
+                <artifactId>hl2parse-common</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.technofovea</groupId>
+                <artifactId>hl2parse-binary</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.technofovea</groupId>
+                <artifactId>hl2parse-parsers</artifactId>
+                <version>${version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.technofovea</groupId>
+                <artifactId>hl2parse-tests</artifactId>
+                <version>${version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.antlr</groupId>
+                <artifactId>antlr-runtime</artifactId>
+                <version>3.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>commons-jxpath</groupId>
+                <artifactId>commons-jxpath</artifactId>
+                <version>1.3</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.sun.xml.bind</groupId>
+                <artifactId>jaxb-impl</artifactId>
+                <scope>runtime</scope>
+                <version>2.1.12</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-api</artifactId>
+                <version>1.6.1</version>
+                <scope>compile</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>1.6.1</version>
+                <scope>test</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>log4j</groupId>
+                <artifactId>log4j</artifactId>
+                <version>1.2.14</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+    <properties>
+        <currentVersion>${version}</currentVersion>
+    </properties>
+</project>

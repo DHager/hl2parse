@@ -1,0 +1,15 @@
+@PointClass = Delta
+[
+        erased(string) : "Wiped out by declaration in included file"
+]
+@include "imported2.fgd"
+
+@PointClass = Beta
+[
+	placeholder(string)
+]
+
+@PointClass = Epsilon
+[
+        eraser(string) : "Wipes out declaration in included file"
+]
