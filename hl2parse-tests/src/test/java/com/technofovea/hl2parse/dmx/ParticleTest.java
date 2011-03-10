@@ -22,7 +22,9 @@ import org.codehaus.preon.CodecDecorator;
 import org.codehaus.preon.DecodingException;
 import org.codehaus.preon.DefaultCodecFactory;
 import org.junit.Before;
+import org.junit.Ignore;
 
+@Ignore
 public class ParticleTest {
 
     private CodecDecorator[] decorators;

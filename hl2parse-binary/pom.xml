@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.technofovea</groupId>
         <artifactId>hl2parse</artifactId>
-        <version>1.2-SNAPSHOT</version>
+        <version>1.3-SNAPSHOT</version>
     </parent>
 
     <artifactId>hl2parse-binary</artifactId>
@@ -18,7 +18,6 @@
         <dependency>
             <groupId>org.codehaus.preon</groupId>
             <artifactId>preon-binding</artifactId>
-            <version>1.1-SNAPSHOT</version>
         </dependency>
 
         <dependency>
