@@ -16,6 +16,12 @@
     <dependencies>
 
         <dependency>
+            <groupId>org.codehaus.preon</groupId>
+            <artifactId>preon-binding</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.technofovea</groupId>
             <artifactId>hl2parse-common</artifactId>
             <scope>compile</scope>

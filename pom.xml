@@ -123,7 +123,6 @@
                     <aggregate>true</aggregate>
                     <includes>
                         <include>**/*.java</include>
-                        <include>**/*.g</include>
                     </includes>
                 </configuration>
                 <executions>
