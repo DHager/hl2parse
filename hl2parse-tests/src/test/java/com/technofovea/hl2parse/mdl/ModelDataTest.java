@@ -39,58 +39,8 @@ import org.junit.Test;
 public class ModelDataTest {
 
     static final String BUOY_MODEL = "buoy_ref.mdl";
-    static final String PHY_MODEL = "buoy_ref.phy";
+    static final String PHY_MODEL = "buoy_ref.phy";    
 
-    @Test
-    public void tempTest() throws Exception {
-        final String TEMPMODEL = System.getenv("USERPROFILE") + "/desktop/phytest2/spy.mdl";
-        //final String TEMPMODEL = "C:/Program Files/Steam/steamapps/terr_@hotmail.com/team fortress 2/tf/models/basic_model.mdl";
-        //final String TEMPMODEL = "C:/Program Files/Steam/steamapps/terr_@hotmail.com/team fortress 2/tf/models/props_swamp/buoy_ref.mdl";
-        //final String TEMPMODEL = "C:/Program Files/Steam/steamapps/terr_@hotmail.com/team fortress 2/tf/models/props_swamp/oildrum_open.mdl";
-
-        ByteBuffer bb = ParseUtil.mapFile(new File(TEMPMODEL));
-
-        ModelData md = new ModelData(bb);
-
-        for (int i = 0; i < md.getSkinCount(); i++) {
-            System.out.println("Skin #" + i);
-            for (String t : md.getTexturesForSkin(i)) {
-                System.out.println("\t" + t);
-            }
-        }
-        System.out.println("Search paths: " + md.getTextureSearchPaths());
-        System.out.println("Included models: " + md.getIncludedModels());
-
-    }
-
-    @Ignore
-    @Test
-    public void testBuoyModel() throws Exception {
-
-        final int skinCount = 3;
-
-        ByteBuffer bb = ParseUtil.mapFile(new File(this.getClass().getResource(BUOY_MODEL).toURI()));
-
-        ModelData md = new ModelData(bb);
-
-        Assert.assertEquals("props_swamp/buoy_ref.mdl", md.getModelName());
-
-        List<String> expectedPaths = new ArrayList<String>();
-        expectedPaths.add("materials/models/props_swamp/");
-
-        Assert.assertEquals(skinCount, md.getSkinCount());
-
-        Map<Integer, List<String>> expectedSkins = new HashMap<Integer, List<String>>();
-        expectedSkins.put(0, Arrays.asList(new String[]{"buoy_diffuse.vmt"}));
-        expectedSkins.put(1, Arrays.asList(new String[]{"buoy_diffuse2.vmt"}));
-        expectedSkins.put(2, Arrays.asList(new String[]{"buoy_diffuse3.vmt"}));
-
-        for(int i = 0; i < skinCount; i++){
-            Assert.assertEquals(expectedSkins.get(i), md.getTexturesForSkin(i));
-        }
-        Assert.assertEquals(expectedPaths, md.getTextureSearchPaths());
-
-    }
 
     protected static VdfRoot parseVdf(String data) throws RecognitionException {
         CharStream cs = new ANTLRStringStream(data);
@@ -100,7 +50,42 @@ public class ModelDataTest {
         return root;
     }
 
-    @Ignore //TODO better phy test
+    @Test
+    public void testBuoyModel() throws Exception {
+
+        final int skinCount = 3;
+
+        ByteBuffer bb = ParseUtil.mapFile(new File(this.getClass().getResource(BUOY_MODEL).toURI()));
+        ModelData md = new ModelData(bb);
+
+        Assert.assertEquals("props_swamp/buoy_ref.mdl", md.getModelName());
+
+        Assert.assertEquals(skinCount, md.getSkinCount());
+
+        List<String> expectedPaths = new ArrayList<String>();
+        expectedPaths.add("materials/models/props_swamp/");
+        Assert.assertEquals(expectedPaths, md.getTextureSearchPaths());
+
+        /*
+         * A quick explanation: MDLs store "skins" as a sort of replacement table.
+         * Just because a texture appears in the list from getTexturesForSkin()
+         * doesn't necessarily mean that it will be used, only that it would
+         * replace whatever was in that same Nth position.
+         */
+        Map<Integer, List<String>> expectedSkins = new HashMap<Integer, List<String>>();
+        expectedSkins.put(0, Arrays.asList(new String[]{"buoy_diffuse.vmt", "buoy_diffuse2.vmt","buoy_diffuse3.vmt"}));
+        expectedSkins.put(1, Arrays.asList(new String[]{"buoy_diffuse2.vmt","buoy_diffuse2.vmt","buoy_diffuse3.vmt"}));
+        expectedSkins.put(2, Arrays.asList(new String[]{"buoy_diffuse3.vmt","buoy_diffuse2.vmt","buoy_diffuse3.vmt"}));
+
+        Map<Integer,List<String>> actualSkins = new HashMap<Integer, List<String>>();
+        for(int i = 0; i < skinCount; i++){
+            actualSkins.put(i, md.getTexturesForSkin(i));
+        }
+        Assert.assertEquals(expectedSkins, actualSkins);
+        
+
+    }
+    
     @Test
     public void testBuoyPhy() throws Exception {
         ByteBuffer bb = ParseUtil.mapFile(new File(this.getClass().getResource(PHY_MODEL).toURI()));
@@ -114,7 +99,10 @@ public class ModelDataTest {
 
         //System.out.println(rawPropData);
 
-        //TODO pick a different model with multiple gibs
+        /*
+         * TODO pick a different freely-distributable model with multiple gibs
+         * Until then this isn't a very good test.
+         */
         Assert.assertEquals(0, pdr.getAllGibs().size());
     }
 }
