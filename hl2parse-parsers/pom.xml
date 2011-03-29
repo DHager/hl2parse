@@ -5,7 +5,7 @@
     <parent>
         <groupId>com.technofovea</groupId>
         <artifactId>hl2parse</artifactId>
-        <version>1.2.1-BETA</version>
+        <version>1.2.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>hl2parse-parsers</artifactId>

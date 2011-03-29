@@ -4,7 +4,7 @@
 
     <groupId>com.technofovea</groupId>
     <artifactId>hl2parse</artifactId>
-    <version>1.2.1-BETA</version>
+    <version>1.2.2-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>HL2Parse</name>
