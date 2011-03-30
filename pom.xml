@@ -9,11 +9,17 @@
     <packaging>pom</packaging>
     <name>HL2Parse</name>
     <url>http://technofovea.com/</url>
-    <description>
-
+    <description>HL2Parse is a library for interpreting certain files from Valve Software and the "Source" game engine.
     </description>
 
-
+    <licenses>
+        <license>
+            <name>Creative Commons Attribution-ShareAlike 3.0 Unported License</name>
+            <url>http://creativecommons.org/licenses/by-sa/3.0/</url>
+            <distribution>repo</distribution>
+            <comments>May use commercially. May alter, but must provide attribution and share under the same license.</comments>
+        </license>
+    </licenses>
 
     <modules>
         <!-- -->
