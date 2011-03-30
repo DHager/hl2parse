@@ -4,14 +4,22 @@
 
     <groupId>com.technofovea</groupId>
     <artifactId>hl2parse</artifactId>
-    <version>1.3-SNAPSHOT</version>
+    <version>1.2.2-SNAPSHOT</version>
 
     <packaging>pom</packaging>
     <name>HL2Parse</name>
     <url>http://technofovea.com/</url>
-    <description>
-
+    <description>HL2Parse is a library for interpreting certain files from Valve Software and the "Source" game engine.
     </description>
+
+    <licenses>
+        <license>
+            <name>Creative Commons Attribution-ShareAlike 3.0 Unported License</name>
+            <url>http://creativecommons.org/licenses/by-sa/3.0/</url>
+            <distribution>repo</distribution>
+            <comments>May use commercially. May alter, but must provide attribution and share under the same license.</comments>
+        </license>
+    </licenses>
 
     <modules>
         <!-- -->
@@ -24,6 +32,38 @@
         <module>hl2parse-registry</module>
         -->
     </modules>
+
+
+    <repositories>
+        <repository>
+            <id>dhager-github</id>
+            <name>DHager's Github Maven Repository</name>
+            <url>http://dhager.github.com/mvn-repo/releases</url>
+        </repository>
+    </repositories>
+
+    <distributionManagement>
+        <repository>
+            <!--
+            This does not reference a "real" maven repository, but instead
+            a local folder which is externally managed and uploaded through
+            other means.
+            -->
+            <name>Local repository for later upload (releases)</name>
+            <id>temp-repo</id>
+            <url>file://${parentBase}/../mvn-repo/releases</url>
+        </repository>
+        <snapshotRepository>
+            <!--
+            This does not reference a "real" maven repository, but instead
+            a local folder which is externally managed and uploaded through
+            other means.
+            -->
+            <name>Local repository for later upload (snapshots)</name>
+            <id>temp-repo-snapshots</id>
+            <url>file://${parentBase}/../mvn-repo/snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <build>
         <pluginManagement>
@@ -59,24 +99,39 @@
 
         <plugins>
 
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.5</source>
+                    <target>1.5</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-source-plugin</artifactId>
                 <executions>
-                    <!--
                     <execution>
                         <id>attach-sources</id>
                         <goals>
                             <goal>jar</goal>
                         </goals>
                     </execution>
-                    -->
                 </executions>
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-javadoc-plugin</artifactId>
-                <!--
                 <executions>
                     <execution>
                         <id>attach-javadocs</id>
@@ -85,32 +140,6 @@
                         </goals>
                     </execution>
                 </executions>
-                -->
-                <configuration>
-                    <links>
-                        <link>http://java.sun.com/j2se/1.5.0/docs/api</link>
-                        <link>http://jakarta.apache.org/commons/chain/apidocs</link>
-                    </links>
-                    <show>public</show>
-
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>1.5</source>
-                    <target>1.5</target>
-                    <encoding>UTF-8</encoding>
-                    <showDeprecation>true</showDeprecation>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <artifactId>maven-resources-plugin</artifactId>
-                <configuration>
-                    <encoding>UTF-8</encoding>
-                </configuration>
             </plugin>
 
             <plugin>
@@ -135,17 +164,6 @@
             </plugin>
         </plugins>
     </build>
-    <reporting>
-        <plugins>
-            <plugin>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <configuration>
-                    <reportOutputDirectory>${project.reporting.outputDirectory}/apidocs/${version}</reportOutputDirectory>
-                    <destDir>apidocs/${version}</destDir>
-                </configuration>
-            </plugin>
-        </plugins>
-    </reporting>
 
     <dependencyManagement>
         <dependencies>
@@ -224,7 +242,9 @@
 
         </dependencies>
     </dependencyManagement>
+
     <properties>
         <currentVersion>${version}</currentVersion>
+        <parentBase>${basedir}</parentBase>
     </properties>
 </project>
