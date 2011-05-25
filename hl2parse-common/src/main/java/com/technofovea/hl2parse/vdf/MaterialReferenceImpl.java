@@ -10,7 +10,7 @@
  * Permissions beyond the scope of this license may be available
  * at http://technofovea.com/ .
  */
-package com.technofovea.hl2parse.xml;
+package com.technofovea.hl2parse.vdf;
 
 import java.util.Arrays;
 import java.util.Collection;

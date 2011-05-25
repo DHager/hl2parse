@@ -1,7 +1,7 @@
 /*
  * 
  */
-package com.technofovea.hl2parse.xml;
+package com.technofovea.hl2parse.vdf;
 
 /**
  *

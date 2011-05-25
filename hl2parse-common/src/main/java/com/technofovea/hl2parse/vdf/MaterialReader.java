@@ -13,7 +13,6 @@
 package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.*;
-import com.technofovea.hl2parse.xml.MaterialReference;
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;

@@ -13,8 +13,6 @@
 package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.vdf.GameConfigReader.Game;
-import com.technofovea.hl2parse.xml.MaterialReference;
-import com.technofovea.hl2parse.xml.MaterialReferenceImpl;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -31,7 +29,7 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Assert;
 import org.junit.Test;
-import static com.technofovea.hl2parse.xml.ReferenceType.*;
+import static com.technofovea.hl2parse.vdf.ReferenceType.*;
 
 /**
  *
