@@ -14,6 +14,7 @@ package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.*;
 import com.technofovea.hl2parse.xml.MaterialReference;
+import java.util.Collections;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
@@ -32,18 +33,27 @@ public class MaterialReader {
     static final String PATCH_INCLUDE = "include";
     VdfRoot root;
     JXPathContext context;
-    Set<MaterialReference> props;
     Set<String> textures = new HashSet<String>();
     Set<String> materials = new HashSet<String>();
+    Iterator<VdfAttribute> allAttribs;
 
     public MaterialReader(VdfRoot rootNode, Set<MaterialReference> props) {
         root = rootNode;
         context = JXPathContext.newContext(root);
         JxPathUtil.addFunctions(context);
+        allAttribs = context.iterate("//attributes");
+        inspectFile(props);
+    }
 
 
-        Iterator<VdfAttribute> allAttribs = context.iterate("//attributes");
-
+    private void inspectFile(Set<MaterialReference> props) {
+        materials.clear();
+        textures.clear();
+        
+        if(props == null){
+            props = Collections.emptySet();
+        }
+        
         while (allAttribs.hasNext()) {
             VdfAttribute attrPair = allAttribs.next();
             String key = attrPair.getName();
@@ -93,7 +103,8 @@ public class MaterialReader {
             }
         }
     }
-
+    
+    
     public Set<String> getMaterials() {
         return new HashSet<String>(materials);
     }

@@ -14,6 +14,7 @@ package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.vdf.GameConfigReader.Game;
 import com.technofovea.hl2parse.xml.MaterialReference;
+import com.technofovea.hl2parse.xml.MaterialReferenceImpl;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -30,6 +31,7 @@ import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
 import org.junit.Assert;
 import org.junit.Test;
+import static com.technofovea.hl2parse.xml.ReferenceType.*;
 
 /**
  *
@@ -124,7 +126,12 @@ public class ParseTest {
 
         VdfRoot root = doSloppyParse(getClass().getResourceAsStream(MATERIAL_WATER));
         //System.out.println(root);
-        Set<MaterialReference> matSettings = MaterialReader.getDefaultMaterialSettings();
+        Set<MaterialReference> matSettings = new HashSet<MaterialReference>(Arrays.asList(
+                new MaterialReferenceImpl(MATERIAL, "$fallbackmaterial"),
+                new MaterialReferenceImpl(TEXTURE, "$normalmap"),
+                new MaterialReferenceImpl(MATERIAL, "$underwateroverlay"),
+                new MaterialReferenceImpl(MATERIAL, "$bottommaterial")));
+
         MaterialReader matReader = new MaterialReader(root, matSettings);
 
         String[] expectedTextures = new String[]{
@@ -147,7 +154,12 @@ public class ParseTest {
     public void testBlendVmf() throws Exception {
         VdfRoot root = doSloppyParse(getClass().getResourceAsStream(MATERIAL_BLEND));
 
-        Set<MaterialReference> matSettings = MaterialReader.getDefaultMaterialSettings();
+        Set<MaterialReference> matSettings = new HashSet<MaterialReference>(Arrays.asList(
+                new MaterialReferenceImpl(MATERIAL, "$fallbackmaterial"),
+                new MaterialReferenceImpl(TEXTURE, "$basetexture"),
+                new MaterialReferenceImpl(TEXTURE, "$blendmodulatetexture"),
+                new MaterialReferenceImpl(TEXTURE, "$bumpmap")));
+
         MaterialReader matReader = new MaterialReader(root, matSettings);
 
         String[] expectedTextures = new String[]{
