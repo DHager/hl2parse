@@ -13,16 +13,10 @@
 package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.*;
-import com.technofovea.hl2parse.xml.MaterialRefList;
 import com.technofovea.hl2parse.xml.MaterialReference;
-import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
-import javax.xml.bind.Unmarshaller;
 import org.apache.commons.jxpath.JXPathContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -33,29 +27,16 @@ import org.slf4j.LoggerFactory;
  */
 public class MaterialReader {
 
-    public static final MaterialRefList getDefaultMaterialSettings() throws JAXBException {
-        InputStream is = MaterialReader.class.getResourceAsStream("DefaultMaterials.xml");
-        return loadFromXml(is);
-    }
 
-    public static final MaterialRefList loadFromXml(InputStream stream) throws JAXBException {
-        JAXBContext jc = JAXBContext.newInstance(MaterialReference.class, MaterialRefList.class);
-        Unmarshaller um = jc.createUnmarshaller();
-        Marshaller m = jc.createMarshaller();
-        m.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.TRUE);
-
-        Object o = um.unmarshal(stream);
-        return (MaterialRefList) o;
-    }
     private static final Logger logger = LoggerFactory.getLogger(MaterialReader.class);
     static final String PATCH_INCLUDE = "include";
     VdfRoot root;
     JXPathContext context;
-    MaterialRefList props;
+    Set<MaterialReference> props;
     Set<String> textures = new HashSet<String>();
     Set<String> materials = new HashSet<String>();
 
-    public MaterialReader(VdfRoot rootNode, MaterialRefList props) {
+    public MaterialReader(VdfRoot rootNode, Set<MaterialReference> props) {
         root = rootNode;
         context = JXPathContext.newContext(root);
         JxPathUtil.addFunctions(context);

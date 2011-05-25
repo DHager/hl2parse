@@ -14,40 +14,21 @@ package com.technofovea.hl2parse.xml;
 
 import java.util.HashSet;
 import java.util.Set;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlEnum;
-import javax.xml.bind.annotation.XmlEnumValue;
-import javax.xml.bind.annotation.XmlList;
-import javax.xml.bind.annotation.XmlType;
 
 /**
  * Represents a material property that references another asset. For example,
  * $basetexture references an external texture.
  * @author Darien Hager
  */
-@XmlAccessorType(XmlAccessType.NONE)
 public class MaterialReference {
 
-    @XmlType
-    @XmlEnum(value = String.class)
     public static enum ReferenceType {
-
-        @XmlEnumValue("texture")
         TEXTURE,
-                
-        @XmlEnumValue("material")
         MATERIAL
     }
 
-
-    @XmlElement(required = true)
-    @XmlList // Allows whitespace-separation
     protected Set<String> names = new HashSet<String>();;
-    @XmlElement(required = false,name="ignoreValue")
     protected Set<String> ignoreValues = new HashSet<String>();
-    @XmlElement(required = false, defaultValue="texture")
     protected ReferenceType type = ReferenceType.TEXTURE;
 
     public Set<String> getIgnoreValues() {

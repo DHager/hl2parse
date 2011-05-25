@@ -13,12 +13,13 @@
 package com.technofovea.hl2parse.vdf;
 
 import com.technofovea.hl2parse.vdf.GameConfigReader.Game;
-import com.technofovea.hl2parse.xml.MaterialRefList;
+import com.technofovea.hl2parse.xml.MaterialReference;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -27,7 +28,6 @@ import java.util.Set;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
-import org.apache.log4j.Level;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -46,11 +46,7 @@ public class ParseTest {
     static final String SOUNDSCAPE = "soundscapes_2fort.txt";
 
     private void assertSameItems(String[] expectedArray, Collection<String> actualCollection) {
-        Set<String> expected = new HashSet<String>();
-        for (String s : expectedArray) {
-            expected.add(s);
-        }
-
+        Set<String> expected = new HashSet<String>(Arrays.asList(expectedArray));
         Set<String> actual = new HashSet<String>(actualCollection);
 
         Assert.assertEquals(expected, actual);
@@ -128,7 +124,7 @@ public class ParseTest {
 
         VdfRoot root = doSloppyParse(getClass().getResourceAsStream(MATERIAL_WATER));
         //System.out.println(root);
-        MaterialRefList matSettings = MaterialReader.getDefaultMaterialSettings();
+        Set<MaterialReference> matSettings = MaterialReader.getDefaultMaterialSettings();
         MaterialReader matReader = new MaterialReader(root, matSettings);
 
         String[] expectedTextures = new String[]{
@@ -151,7 +147,7 @@ public class ParseTest {
     public void testBlendVmf() throws Exception {
         VdfRoot root = doSloppyParse(getClass().getResourceAsStream(MATERIAL_BLEND));
 
-        MaterialRefList matSettings = MaterialReader.getDefaultMaterialSettings();
+        Set<MaterialReference> matSettings = MaterialReader.getDefaultMaterialSettings();
         MaterialReader matReader = new MaterialReader(root, matSettings);
 
         String[] expectedTextures = new String[]{
