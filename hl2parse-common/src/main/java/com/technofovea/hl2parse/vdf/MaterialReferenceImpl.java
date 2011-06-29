@@ -24,16 +24,22 @@ import java.util.Set;
  * @author Darien Hager
  */
 public class MaterialReferenceImpl implements MaterialReference {
+
     protected Set<String> names = new HashSet<String>();
     protected Set<String> ignoreValues = new HashSet<String>();
     protected ReferenceType type = ReferenceType.TEXTURE;
 
     public MaterialReferenceImpl() {
+        // No-op constructor
     }
 
-    public MaterialReferenceImpl(ReferenceType type, String... names) {
-        this.names.addAll(Arrays.asList(names));
-        this.type = type;
+    public MaterialReferenceImpl(String... propNames) {
+        this(ReferenceType.TEXTURE, propNames);
+    }
+
+    public MaterialReferenceImpl(ReferenceType propType, String... propNames) {
+        this.names.addAll(Arrays.asList(propNames));
+        this.type = propType;
     }
 
     @Override
@@ -111,5 +117,20 @@ public class MaterialReferenceImpl implements MaterialReference {
         hash = 97 * hash + (this.ignoreValues != null ? this.ignoreValues.hashCode() : 0);
         hash = 97 * hash + (this.type != null ? this.type.hashCode() : 0);
         return hash;
+    }
+
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{").append(this.getClass().getSimpleName()).append(" ");
+        sb.append("names:[");
+        for(String name: names){
+           sb.append(name);
+           sb.append(",");
+        }
+        sb.deleteCharAt(sb.length()-1);
+        sb.append("]");
+        
+        return sb.toString();
     }
 }

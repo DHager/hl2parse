@@ -15,11 +15,10 @@ package com.technofovea.hl2parse.vdf;
 import com.technofovea.hl2parse.JxPathUtil;
 import java.io.File;
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
+import java.util.Set;
 import java.util.SortedMap;
 import java.util.TreeMap;
 import org.apache.commons.jxpath.JXPathContext;
@@ -124,7 +123,7 @@ public class GameConfigReader {
     private static final Logger logger = LoggerFactory.getLogger(GameConfigReader.class);
     VdfRoot root;
     JXPathContext context;
-    Map<String, Game> games = new HashMap<String, Game>();
+    Set<Game> games = new HashSet<Game>();
     int sdkVersion;
 
     public GameConfigReader(VdfRoot rootNode) {
@@ -141,7 +140,7 @@ public class GameConfigReader {
             JXPathContext relativeContext = context.getRelativeContext(p);
             Game g = new Game(relativeContext);
             logger.trace("Found game: {}",g.getName());
-            games.put(g.getName(), g);
+            games.add(g);
         }
 
         try{
@@ -162,9 +161,9 @@ public class GameConfigReader {
         return ret;
     }
 
-    public Map<String, Game> getGames() {
+    public Set<Game> getGames() {
         // Return a copy
-        return new HashMap<String, Game>(games);
+        return new HashSet<Game>(games);
     }
 
     public int getSdkVersion() {

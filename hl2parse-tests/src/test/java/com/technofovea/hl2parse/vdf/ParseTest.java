@@ -95,16 +95,26 @@ public class ParseTest {
         Assert.assertEquals(3, gcr.getSdkVersion());
 
 
-        Map<String, Game> gameMap = gcr.getGames();
+        Set<Game> gameSet = gcr.getGames();
         Set<String> expectedGameNames = new HashSet<String>();
         expectedGameNames.add(TITLE_EP2);
         expectedGameNames.add(TITLE_TF2);
         expectedGameNames.add(TITLE_PORTAL);
 
-        Assert.assertEquals(expectedGameNames, gameMap.keySet());
+        Set<String> gameNames = new HashSet<String>();
+        for(Game g : gameSet){
+            gameNames.add(g.getName());
+        }
+        Assert.assertEquals(expectedGameNames, gameNames);
 
         // Check that individual games seem Ok
-        final Game portal = gameMap.get(TITLE_PORTAL);
+        Game portal = null;
+        for(Game g : gameSet){
+            if(TITLE_PORTAL.equals(g.getName())){
+                portal = g;
+            }
+        }
+        Assert.assertNotNull(portal);
         final String steamBase = "c:/program files/steam/steamapps/STEAMLOGON";
         Assert.assertEquals(new File(steamBase + "/portal/portal"), portal.getGameDir());
         Assert.assertEquals(4, portal.getMapFormat());
