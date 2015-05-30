@@ -1,0 +1,9 @@
+"lang" 
+{ 
+	"Language" "English" 
+	"Tokens" 
+	{
+		"DOTA_Tooltip_ability_dazzle_poison_touch_Description"							"Casts a poisonous spell <font color=\"#ff66ff\">LEVEL 3</font>"
+	}
+}
+
