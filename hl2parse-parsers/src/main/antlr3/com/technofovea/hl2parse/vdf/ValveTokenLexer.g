@@ -81,7 +81,7 @@ MINUS 	:	 '-';
 DOT 	: 	 '.';
     
 STRING
-    : QUOT (  ~QUOT )* QUOT
+    : QUOT (  ~QUOT | '\\"')* QUOT
     {
     setText(getText().substring(1, getText().length()-1));
     }

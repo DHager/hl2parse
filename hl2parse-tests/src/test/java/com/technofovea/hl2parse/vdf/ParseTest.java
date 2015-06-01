@@ -44,6 +44,7 @@ public class ParseTest {
     static final String PARTICLE_MANIFEST = "particles_manifest.txt";
     static final String SDK_GAME_CONFIG = "GameConfig.txt";
     static final String SOUNDSCAPE = "soundscapes_2fort.txt";
+    static final String TOKEN_FILE = "dota_english.txt";
 
     private void assertSameItems(String[] expectedArray, Collection<String> actualCollection) {
         Set<String> expected = new HashSet<String>();
@@ -273,5 +274,19 @@ public class ParseTest {
         SteamMetaReader smr = new SteamMetaReader(root);
 
         Assert.assertEquals("user@example.com", smr.getAutoLogon());
+    }
+    
+    @Test
+    public void testDotaEnglishTokenFile() throws Exception {
+        File tokenFile = new File(getClass().getResource(TOKEN_FILE).toURI());
+        VdfRoot root = doSloppyParse(new FileInputStream(tokenFile));
+        
+        VdfNode langNode = root.getChildren().get(0);
+        
+        Assert.assertEquals("lang", langNode.getName());
+        
+        VdfAttribute descriptionAttribute = langNode.getChildren().get(0).getAttributes().get(0);
+
+        Assert.assertEquals("Casts a poisonous spell <font color=\\\"#ff66ff\\\">LEVEL 3</font>", descriptionAttribute.getValue());
     }
 }
