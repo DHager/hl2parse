@@ -27,8 +27,8 @@ import java.util.Set;
 import org.antlr.runtime.ANTLRInputStream;
 import org.antlr.runtime.CommonTokenStream;
 import org.antlr.runtime.RecognitionException;
-import org.apache.log4j.Level;
 import org.junit.Assert;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -88,6 +88,7 @@ public class ParseTest {
 
     }
 
+    @Ignore
     @Test
     public void testOrangeboxSdkConfig() throws Exception {
         final String TITLE_EP2 = "Half-Life 2: Episode Two";
