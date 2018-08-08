@@ -48,6 +48,7 @@ public class ClientRegistryTest {
         cachedAppNames.clear();
     }
 
+    @Ignore
     @Test
     public void parseClientRegistry() throws Exception {
 
@@ -61,6 +62,7 @@ public class ClientRegistryTest {
         Assert.assertEquals("TopKey", root.getName());
     }
 
+    @Ignore
     @Test
     public void getContentDescriptionRecord() throws BlobParseFailure, IOException {
         ByteBuffer buf = ParseUtil.mapFile(BLOB_SOURCE);
@@ -76,6 +78,7 @@ public class ClientRegistryTest {
 
     }
 
+    @Ignore
     @Test
     public void getAppDependencies() throws Exception {
 
